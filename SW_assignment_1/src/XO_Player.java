@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 public class XO_Player extends Player{
     Scanner input = new Scanner(System.in);
@@ -6,10 +7,11 @@ public class XO_Player extends Player{
     }
 
     @Override
-    void get_move(int x, int y) {
+    void get_move(_2DIndex P) {
         System.out.println("\nPlease enter your move x and y(0 to 2) separated with space  : ");
-        x = input.nextInt();
-        y = input.nextInt();
+        int x = input.nextInt();
+        int y = input.nextInt();
+        P.set_Index(x,y);
     }
 
     @Override
